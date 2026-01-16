@@ -1,11 +1,21 @@
 #include <stdio.h> // Necessary for printf()
-
-// TODO Other includes
-
+#include <stdlib.h>
+#include <time.h> // For the random number generator
 
 int main() {
-	// The main function is the entrypoint of the program. When the program
-	// is executed, it will automatically start here.
-	
-	// TODO Complete the program
+	srand(time(NULL)); // Basically declaring "rand"
+
+	int myrand = rand() % 11; // Random number 1-10 stored in "myrand"
+
+	// If boundaries for what to be displayed
+	if (myrand < 5) {
+		printf("Eat more beef, kick less cats\n");
+	} else if (myrand > 4 && myrand < 10) {
+		printf("FRODO LIVES\n");
+	} else {
+		printf("Larn is the best roguelike\n");
+	}
+
+
+	printf("The random number was: %d\n", myrand); // Print what number
 }
